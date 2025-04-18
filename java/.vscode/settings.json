@@ -1,0 +1,5 @@
+{
+    "terminal.integrated.commandsToSkipShell": [
+        "    \"terminal.integrated.shellArgs.windows\": [\"--chcp\", \"65001\"],"
+    ]
+}
