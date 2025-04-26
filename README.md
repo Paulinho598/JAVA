@@ -9,3 +9,7 @@ Fiz um protótipo bem capenga de uma calculadora feita em JAVA.
 25/04/25
 Melhorei o design da calculadora.
 :3
+
+26/04/25
+Terminei a calculadora.
+:3
