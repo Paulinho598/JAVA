@@ -4,8 +4,6 @@ import javax.swing.*;
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.BorderLayout;
 
 public class App {
@@ -42,12 +40,34 @@ public class App {
         Butaum n8 = new Butaum("8");
         Butaum n9 = new Butaum("9");
 
+        /*Funções dos números*/
+        n1.addActionListener(e-> coisinhas.eventos.Número("1", resultado_lbl));
+        n2.addActionListener(e-> coisinhas.eventos.Número("2", resultado_lbl));
+        n3.addActionListener(e-> coisinhas.eventos.Número("3", resultado_lbl));
+        n4.addActionListener(e-> coisinhas.eventos.Número("4", resultado_lbl));
+        n5.addActionListener(e-> coisinhas.eventos.Número("5", resultado_lbl));
+        n6.addActionListener(e-> coisinhas.eventos.Número("6", resultado_lbl));
+        n7.addActionListener(e-> coisinhas.eventos.Número("7", resultado_lbl));
+        n8.addActionListener(e-> coisinhas.eventos.Número("8", resultado_lbl));
+        n9.addActionListener(e-> coisinhas.eventos.Número("9", resultado_lbl));
+        n0.addActionListener(e-> coisinhas.eventos.Número("0", resultado_lbl));
+
         /*Operadores*/
         Butaum Adição = new Butaum("+");
         Butaum Subtração = new Butaum("-");
         Butaum Multiplicação = new Butaum("×");
         Butaum Divisão = new Butaum("÷");
         Butaum Igual = new Butaum("=");
+        Butaum Delete = new Butaum("DELETE");
+
+        /*Funções dos operadores*/
+        Adição.addActionListener(e-> coisinhas.eventos.Operador("+", resultado_lbl));
+        Subtração.addActionListener(e-> coisinhas.eventos.Operador("-", resultado_lbl));
+        Multiplicação.addActionListener(e-> coisinhas.eventos.Operador("×", resultado_lbl));
+        Divisão.addActionListener(e-> coisinhas.eventos.Operador("÷", resultado_lbl));
+        Igual.addActionListener(e-> coisinhas.eventos.Calcular(resultado_lbl));
+        Delete.addActionListener(e-> coisinhas.eventos.Limpar(resultado_lbl));
+
 
         painelNúmeros.add(n1);
         painelNúmeros.add(n2);
@@ -68,6 +88,7 @@ public class App {
         painelOperações.add(Multiplicação);
         painelOperações.add(Divisão);
         painelOperações.add(Igual);
+        painelOperações.add(Delete);
 
         Resultado.setBackground(new Color(144,213,255));
         Resultado.add(resultado_lbl);
@@ -149,9 +170,12 @@ for(String op: operadores){
     painelOperações.add(new Butaum(op));
 }*/
 
-/*n1.addActionListener(new ActionListener(){
+
+/*
+n1.addActionListener(new ActionListener() {
     @Override
     public void actionPerformed(ActionEvent e){
         resultado_lbl.setText(resultado_lbl.getText()+1);
     }
-});*/
+}); 
+*/
